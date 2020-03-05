@@ -1,0 +1,332 @@
+*,
+*:before,
+*.after {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    margin: 0;
+    color: #9e9e9e
+}
+
+.c-yellow {
+    color: rgb(248, 194, 23)
+}
+
+.margin-0 {
+    margin: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+
+/*  HEADER  */
+
+header {
+    height: 100vh;
+    background-image: url(./img/ian-dooley-DvIJ7h5p_J8-unsplash.jpg);
+    background-size: cover;
+}
+
+nav {
+    width: 100%;
+    background-color: rgba(26, 26, 26, 0.8);
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 3em;
+}
+
+nav * {
+    display: inline-block;
+}
+
+nav img {
+    height: 1.5em;
+}
+
+nav .logo img {
+    height: 2em;
+}
+
+nav ul {
+    list-style: none;
+    color: rgb(204, 204, 204)
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 1em;
+}
+
+nav .but * {
+    margin: .5em;
+}
+
+.img-w-text {
+    position: relative;
+}
+
+.t-bottom {
+    position: absolute;
+}
+
+.t-bottom-left {
+    position: absolute;
+    left: 15%;
+    bottom: 10%;
+}
+
+.banner {
+    position: relative;
+    height: 100%;
+}
+
+.banner .t-bottom-left {
+    font-size: 1.1em;
+    width: 40%;
+}
+
+.ham {
+    display: none;
+}
+
+
+/*  MAIN  */
+
+main {
+    padding: 0 10%;
+    padding-bottom: 3em;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: #9e9e9e;
+    margin: 3em 0;
+}
+
+.product-collage-1 {
+    width: 100%;
+    height: 60vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 'left left top-right' 'left left bott-right';
+    grid-gap: 2em;
+}
+
+.product-collage-1-l {
+    grid-area: left;
+    background-image: url(./img/ian-dooley-FoF0w-d6Z74-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    font-size: 1.1em;
+}
+
+.product-collage-1-l .t-bottom {
+    bottom: 3em;
+    left: 2em;
+}
+
+.product-collage-1-t-r {
+    grid-area: top-right;
+    background: url(./img/ian-dooley-7m0OJhmjqYg-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.product-collage-1-b-r {
+    grid-area: bott-right;
+    background: url(./img/ian-dooley-rBkihK3n_YI-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.product-collage-2 {
+    margin: 3em 0;
+    width: 100%;
+    height: 40vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 3em;
+}
+
+.product-collage-2>div {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.product-collage-2>div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    filter: brightness(50%);
+}
+
+.product-collage-2 .t-bottom {
+    text-align: center;
+    bottom: 1em;
+}
+
+.product-collage-2-1 {
+    grid-column: 1 / 2;
+}
+
+.product-collage-2-1::before {
+    background-image: url(./img/priscilla-du-preez-GNJbBgPP2VU-unsplash.jpg);
+}
+
+.product-collage-2-2 {
+    grid-column: 2 / 3;
+}
+
+.product-collage-2-2::before {
+    background-image: url(./img/stil-TVllFyGaLEA-unsplash.jpg);
+}
+
+.product-collage-2-3 {
+    grid-column: 3 / 4;
+}
+
+.product-collage-2-3::before {
+    background-image: url(./img/fachry-zella-devandra-bNSdIkCBJOs-unsplash.jpg);
+}
+
+.product-collage-2-4 {
+    grid-column: 4;
+}
+
+.product-collage-2-4::before {
+    background-image: url(./img/sun-lingyan-_H0fjILH5Vw-unsplash.jpg);
+}
+
+.art-collage {
+    display: grid;
+    grid-template-areas: 'top-l top-l top-c top-r' 'bott-l bott-c bott-c top-r';
+    width: 100%;
+    grid-gap: 1em;
+    height: 90vh;
+}
+
+.art-collage-1 {
+    grid-area: top-l;
+    background-image: url(./img/1.png);
+}
+
+.art-collage-2 {
+    grid-area: top-c;
+    background-image: url(./img/5.jpg);
+}
+
+.art-collage-3 {
+    grid-area: top-r;
+    background-image: url(./img/3.png);
+}
+
+.art-collage-4 {
+    grid-area: bott-l;
+    background-image: url(./img/4.png);
+}
+
+.art-collage-5 {
+    grid-area: bott-c;
+    background-image: url(./img/5.png);
+}
+
+.art-collage * {
+    background-size: cover;
+}
+
+
+/*  FOOTER  */
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 5em 2em;
+    background-color: rgb(26, 26, 26);
+}
+
+footer div:nth-child(2) {
+    width: 35%;
+}
+
+.circle {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    background-color: #9e9e9e;
+    display: inline-block;
+    margin: .5em;
+}
+
+@media (max-width: 900px) {
+    .nav-menu {
+        display: none;
+    }
+    nav .logo img {
+        height: 1em;
+    }
+    header {
+        background-position: center;
+    }
+    .product-collage-1 {
+        height: 100vw;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 1fr;
+        grid-template-areas: 'left left' 'top-right bott-right';
+    }
+    .ham {
+        display: block;
+        flex-direction: column;
+    }
+    .ham div {
+        display: block;
+        width: 1em;
+        height: .1em;
+        background-color: white;
+        margin: 6px 0;
+        margin-left: auto;
+    }
+    .ham div:nth-child(2) {
+        width: 1.5em;
+    }
+    .product-collage-2 {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        height: 100vw;
+    }
+    .product-collage-2-3 {
+        grid-column: 1 / 2;
+        grid-row: 2;
+    }
+    .product-collage-2-4 {
+        grid-column: 2;
+        grid-row: 2;
+        position: relative;
+    }
+    .art-collage {
+        grid-template-areas: 'top-r bott-c bott-c top-c' 'top-r bott-l top-l top-l';
+        grid-gap: 0;
+        height: 39vw;
+        background-position: 0px 00px;
+    }
+    footer div:nth-child(2) {
+        display: none;
+    }
+}
